@@ -1,0 +1,56 @@
+No obstacle low contouring error
+
+        self.W  = np.diag([20,100])
+        self.W_alpha  = np.array([[1]])
+        self.W_input = np.diag([0,10,0])
+        self.umax = np.array([[self.deltamax],[0],[self.Fxmax]])
+        self._cumax = np.array([[self.deltamax/20],[self.Fxmax/2],[self.Fxmax/2]])#constraint on change in u
+        self._cqmax = np.array([[2],[2],[0.5],[50],[50],[10]])# constraint on change in q
+        self.Rdu = np.diag([70,1,20])
+        self.qv = np.array([[-50]])
+        self.tamax = np.array([[1]])
+        self.vmax = np.array([[(0.5)/self.dt]])
+
+
+No obstacle high contouring error
+
+        self.W  = np.diag([1,20])
+        self.W_alpha  = np.array([[1]])
+        self.W_input = np.diag([0,10,0])
+        self.umax = np.array([[self.deltamax],[0],[self.Fxmax]])
+        self._cumax = np.array([[self.deltamax/5],[self.Fxmax/2],[self.Fxmax/2]])#constraint on change in u
+        self._cqmax = np.array([[2],[2],[0.5],[50],[50],[10]])# constraint on change in q
+        self.Rdu = np.diag([70,1,20])
+        self.qv = np.array([[-100]])
+        self.vmax = np.array([[(1)/self.dt]])
+
+No obstacle T=20,17.5,15 m N=30
+        self.We  = np.diag([20,100])
+        self.Q_alpha  = np.array([[1]])
+        self.Q_input = np.diag([1,10,0])
+        self.umax = np.array([[self.deltamax],[0],[self.Fxmax]])
+        self._cumax = np.array([[self.deltamax/20],[self.Fxmax/2],[self.Fxmax/2]])#constraint on change in u
+        self._cqmax = np.array([[2],[2],[0.5],[1],[50],[10]])# constraint on change in q
+        self.Rdu = np.diag([70,1,20])
+        self.qv = np.array([[-50]])
+        self.tamax = np.array([[1]])
+        self.vmax = np.array([[(1)/self.dt]])
+        self.qc_term = np.array([[0]])
+        self.W_slack_si = 1000
+        self.W_slack_so = 1000
+
+Obstacle T=20 N=30
+        self.We  = np.diag([5,100])
+        self.Q_alpha  = np.array([[1]])
+        self.Q_input = np.diag([1,10,0])
+        self.umax = np.array([[self.deltamax],[0],[self.Fxmax]])
+        self._cumax = np.array([[self.deltamax/20],[self.Fxmax/2],[self.Fxmax/2]])#constraint on change in u
+        self._cqmax = np.array([[2],[2],[1],[50],[50],[10]])# constraint on change in q
+        self.qmax_4_6 = np.array([[100],[100],[20]]) #limit on rates
+        self.Rdu = np.diag([70,1,20])
+        self.qv = np.array([[-30]])
+        self.tamax = np.array([[1]])
+        self.vmax = np.array([[(1)/self.dt]])
+        self.qc_term = np.array([[0]])
+        self.W_slack_si = 1000
+        self.W_slack_so = 1000
