@@ -1,6 +1,7 @@
 Written By: Abhijeet Kulkarni (amkulk@udel.edu)
 For: Research Project at UD
 Title: Autonomous driving using Model Predictive Contouring Control.
+Video: https://youtu.be/h1aBeLiF1O8
 
 Files:
 ¦   Main.py							    #Main File
